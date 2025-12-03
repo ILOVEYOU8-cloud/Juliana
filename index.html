@@ -83,20 +83,38 @@
      display: block;
     }
 
-    .image-box {
-       width: 100%;
-       display: flex;
-       justify-content: center;   /* centers horizontally */
-       align-items: center;       /* centers vertically */
-       overflow: hidden;
-    }
+    .image-text-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  width: 100%;
+  max-width: 900px;
+  margin: auto;
+}
 
-    .image-box img {
-       max-width: 100%;
-       height: auto;
-       object-fit: contain;
-       display: block;
-    }
+.image-text-box img {
+  width: 300px;   /* ✅ controls how small the image is */
+  height: auto;
+  border-radius: 20px;
+}
+
+.text-box {
+  width: 50%;
+  text-align: left;
+}
+
+   @media (max-width: 768px) {
+  .image-text-box {
+    flex-direction: column;
+  }
+
+  .text-box {
+    width: 100%;
+    text-align: center;
+  }
+}
+
     
     .intro .text{flex:1}
     .text h2{margin:0 0 8px 0;font-size:28px}
@@ -181,16 +199,16 @@
 
   <main>
     <section class="card intro fade-up">
-      <div class="image-box">
+      <div class="image-text-box">
         <img src="media/valentinespic.jpg" alt="photo">
-      </div>
+        <div class="text-box">
         <div class="caption"> Beautiful ❤️💍
-      </div>
-      <div class="text">
-        <h2>To The Love Who Began My Story</h2>
+          <h2>To The Love Who Began My Story</h2>
         <p>I just wanted to wish you a Happy Birthday, Ju 
       on your birthday, I want to give you words that actually feel like us, heavy with meaning, full of truth, and stitched together with every memory we have created. From the very beginning, you weren't just someone I loved you were my first everything, the person who made love real for me in a way nothing else ever did. You became the space where my soul finally felt at home. You became the kind of memory that doesn't fade, not even when life gets complicated or distance tries to dim the light between us. Every moment we had, our laughs, our quiet moments, our days spent just being ourselves, they engraved themselves into me in ways I'll never forget. For the days we shared and the quiet things that became ours  this is for you. Scroll down, play a memory, breathe with me, and enjoy with all your heart, Happy Birthday My Queen ❤️.</p>
-      </div>
+      </div>      
+    </div>      
+      
     </section>
 
     <section class="card intro fade-up">
